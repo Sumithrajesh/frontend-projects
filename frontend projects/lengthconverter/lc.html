@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+    <h2>cm to inches</h2>
+<div class="inputdiv">
+</div>
+    <input type="text" id="input" placeholder="length in cm">
+    <div>
+        <button type="suubmit"  onclick ="convert()">covert to inches</button>
+        </div>
+    <div id="result"></div>
+</div>
+<script>
+    function convert()
+    {
+        const cmVal=Number(document.getElementById("input").value)
+        const inchVal=cmVal/2.54
+        const result=document.getElementById("result")
+        result.innerHTML=inchVal.toFixed(3)+" inches"
+        
+
+    }
+</script>
+    
+</body>
+</html>
